@@ -36,11 +36,12 @@ namespace Resturant.Domain.Models
 
             throw new Exception("Order not started");
 
-            if (CompletedAt != null)
+            if (CompletedAt == null)
 
             throw new Exception("Order already completed");
 
             CompletedAt = DateTime.Now;
+            
         }
     }
 }

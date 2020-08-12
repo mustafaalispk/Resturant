@@ -6,6 +6,6 @@ namespace Resturant.Domain.Models
 {
     interface IChef
     {
-        void Cook(Order order);
+       public void Cook(Order order);
     }
 }

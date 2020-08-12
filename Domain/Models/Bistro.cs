@@ -6,7 +6,6 @@ namespace Resturant.Domain.Models
     class Bistro
     {
         public string Name { get; }
-
         private Queue<Order> OrderQueue { get; set; } = new Queue<Order>();           
 
         private IChef chef;

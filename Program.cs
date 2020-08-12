@@ -8,14 +8,22 @@ namespace Resturant
     {
         static void Main(string[] args)
         {
+            // Interface används för att koppla oss med
+            // specifika implimentation, Chef, cookMaster, replicator
             Chef joe = new Chef("Joe");
 
-            Bistro bistro = new Bistro("Green Joe's'", joe);
+            CookMaster5000 cookMaster = new CookMaster5000();
+
+            EnterpriseReplicator replicator = new EnterpriseReplicator();
+
+            Bistro bistro = new Bistro("Green Joe's'", replicator);
             
             bool isShouldNotExit = true;
 
             while (isShouldNotExit)
             {
+                Clear();
+
                 WriteLine("1. Register order");
                 WriteLine("2. Process orders");
                 WriteLine("3. Exit");
